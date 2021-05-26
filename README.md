@@ -1,15 +1,17 @@
-# Gatsby Starter MDX Basic
+# Gatsby Starter MDX Basic with grammar linter (Vale)
 
 This starter build MDX support into the
 [gatsby-default-starter](https://github.com/gatsbyjs/gatsby-starter-default). Its
-README also applies here.
+README also applies here. 
+
+In addition Grammar check (using Vale) has been added as a pre-build stage for md/mdx files. 
 
 ## 🚀 Quick start
 
 1. **Create a new Gatsby site using this starter**
 
 ```shell
-gatsby new my-site https://github.com/gatsbyjs/gatsby-starter-mdx-basic
+npx gatsby new my-site https://github.com/gatsbyjs/gatsby-starter-mdx-basic
 ```
 
 2. **Install dependencies**
@@ -21,13 +23,13 @@ npm install
 3. **Run the develop script**
 
 ```shell
-gatsby develop
+npx gatsby develop
 ```
 
 4. **Edit Page 2 in `src/pages/page-2.mdx`**
 
-## 🚀 Quick start (Gatsby Cloud)
+5. **Run grammar check script**
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-mdx-basic)
+```shell
+npm run grammar
+```
