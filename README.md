@@ -26,7 +26,13 @@ npm install
 npx gatsby develop
 ```
 
-4. **Edit Page 2 in `src/pages/page-2.mdx`**
+4. **Edit Page 2 in `src/pages/page-2.mdx` to indroduce some errors**
+
+```
+Welcome to page 2
+THis is AWESOME!
+I love it.
+```
 
 5. **Run grammar check script**
 
