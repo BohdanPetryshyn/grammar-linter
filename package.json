@@ -25,13 +25,15 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "yarn grammar && gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grammar": "vale --glob='*.{md,mdx}' ./src"
   },
   "devDependencies": {
+    "@ocular-d/vale-bin": "^1.0.6",
     "prettier": "^1.19.1"
   }
 }
