@@ -6,10 +6,6 @@ module.exports = function() {
     return promisify(valeProcess);
 }
 
-function getValeExitError() {
-    return new Error('Vale spell check has failed to complete.');
-}
-
 function promisify(childProcess) {
     return new Promise(((resolve, reject) => {
         childProcess.stdout.pipe(process.stdout);
@@ -24,4 +20,8 @@ function promisify(childProcess) {
         })
         childProcess.on('error', () => reject(getValeExitError()))
     }))
+}
+
+function getValeExitError() {
+    return new Error('Vale spell check has failed to complete.');
 }
