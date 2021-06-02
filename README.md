@@ -1,41 +1,6 @@
-# Gatsby Starter MDX Basic with grammar linter (Vale)
+## Gatsby vale pre-build hook
 
-This starter build MDX support into the
-[gatsby-default-starter](https://github.com/gatsbyjs/gatsby-starter-default). Its
-README also applies here. 
+This small demo illustrates how the [Vale spell checker](https://www.npmjs.com/package/@ocular-d/vale-bin) can be integrated into the Gatsby build lifecycle.
 
-In addition Grammar check (using Vale) has been added as a pre-build stage for md/mdx files. 
-
-## 🚀 Quick start
-
-1. **Create a new Gatsby site using this starter**
-
-```shell
-npx gatsby new my-site https://github.com/gatsbyjs/gatsby-starter-mdx-basic
-```
-
-2. **Install dependencies**
-
-```shell
-npm install
-```
-
-3. **Run the develop script**
-
-```shell
-npx gatsby develop
-```
-
-4. **Edit Page 2 in `src/pages/page-2.mdx` to indroduce some errors**
-
-```
-Welcome to page 2
-THis is AWESOME!
-I love it.
-```
-
-5. **Run grammar check script**
-
-```shell
-npm run grammar
-```
+The vale-pre-build-hook.js exports a Gatsby lifecycle hook that will be later called before the build stage starts. 
+The hook spawns a child process and waits for it to finish. The build continues after the spell check finishes or fails in case of a non-zero process exit code.
